@@ -1,0 +1,95 @@
+{
+    "type": "object",
+    "properties": {
+        "nextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the input of a ListDeployments operation.",
+            "properties": {
+                "applicationName": {
+                    "description": "The name of an AWS CodeDeploy application associated with the IAM user or AWS account.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "createTimeRange": {
+                    "description": "A time range (start and end) for returning a subset of the list of deployments.",
+                    "properties": {
+                        "end": {
+                            "description": "<p>The end time of the time range.</p> <note> <p>Specify null to leave the end time open-ended.</p> </note>",
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        "start": {
+                            "description": "<p>The start time of the time range.</p> <note> <p>Specify null to leave the start time open-ended.</p> </note>",
+                            "format": "date-time",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "deploymentGroupName": {
+                    "description": "The name of a deployment group for the specified application.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "includeOnlyStatuses": {
+                    "description": "<p>A subset of deployments to list by status:</p> <ul> <li> <p>Created: Include created deployments in the resulting list.</p> </li> <li> <p>Queued: Include queued deployments in the resulting list.</p> </li> <li> <p>In Progress: Include in-progress deployments in the resulting list.</p> </li> <li> <p>Succeeded: Include successful deployments in the resulting list.</p> </li> <li> <p>Failed: Include failed deployments in the resulting list.</p> </li> <li> <p>Stopped: Include stopped deployments in the resulting list.</p> </li> </ul>",
+                    "items": {
+                        "enum": [
+                            "Created",
+                            "Queued",
+                            "InProgress",
+                            "Succeeded",
+                            "Failed",
+                            "Stopped",
+                            "Ready"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "nextToken": {
+                    "description": "An identifier returned from the previous list deployments call. It can be used to return the next set of deployments in the list.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

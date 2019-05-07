@@ -1,0 +1,148 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the input of a GetApplicationRevision operation.",
+            "properties": {
+                "applicationName": {
+                    "description": "The name of the application that corresponds to the revision.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "revision": {
+                    "description": "Information about the application revision to get, including type and location.",
+                    "properties": {
+                        "appSpecContent": {
+                            "description": " The content of an AppSpec file for an AWS Lambda or Amazon ECS deployment. The content is formatted as JSON or YAML and stored as a RawString. ",
+                            "properties": {
+                                "content": {
+                                    "description": "<p> The YAML-formatted or JSON-formatted revision string. </p> <p> For an AWS Lambda deployment, the content includes a Lambda function name, the alias for its original version, and the alias for its replacement version. The deployment shifts traffic from the original version of the Lambda function to the replacement version. </p> <p> For an Amazon ECS deployment, the content includes the task name, information about the load balancer that serves traffic to the container, and more. </p> <p> For both types of deployments, the content can specify Lambda functions that run at specified hooks, such as <code>BeforeInstall</code>, during a deployment. </p>",
+                                    "type": "string"
+                                },
+                                "sha256": {
+                                    "description": " The SHA256 hash value of the revision content. ",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gitHubLocation": {
+                            "description": "Information about the location of application artifacts stored in GitHub.",
+                            "properties": {
+                                "commitId": {
+                                    "description": "The SHA1 commit ID of the GitHub commit that represents the bundled artifacts for the application revision.",
+                                    "type": "string"
+                                },
+                                "repository": {
+                                    "description": "<p>The GitHub account and repository pair that stores a reference to the commit that represents the bundled artifacts for the application revision. </p> <p>Specified as account/repository.</p>",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "revisionType": {
+                            "description": "<p>The type of application revision:</p> <ul> <li> <p>S3: An application revision stored in Amazon S3.</p> </li> <li> <p>GitHub: An application revision stored in GitHub (EC2/On-premises deployments only).</p> </li> <li> <p>String: A YAML-formatted or JSON-formatted string (AWS Lambda deployments only).</p> </li> </ul>",
+                            "enum": [
+                                "S3",
+                                "GitHub",
+                                "String",
+                                "AppSpecContent"
+                            ],
+                            "type": "string"
+                        },
+                        "s3Location": {
+                            "description": "Information about the location of a revision stored in Amazon S3. ",
+                            "properties": {
+                                "bucket": {
+                                    "description": "The name of the Amazon S3 bucket where the application revision is stored.",
+                                    "type": "string"
+                                },
+                                "bundleType": {
+                                    "description": "<p>The file type of the application revision. Must be one of the following:</p> <ul> <li> <p>tar: A tar archive file.</p> </li> <li> <p>tgz: A compressed tar archive file.</p> </li> <li> <p>zip: A zip archive file.</p> </li> </ul>",
+                                    "enum": [
+                                        "tar",
+                                        "tgz",
+                                        "zip",
+                                        "YAML",
+                                        "JSON"
+                                    ],
+                                    "type": "string"
+                                },
+                                "eTag": {
+                                    "description": "<p>The ETag of the Amazon S3 object that represents the bundled artifacts for the application revision.</p> <p>If the ETag is not specified as an input parameter, ETag validation of the object is skipped.</p>",
+                                    "type": "string"
+                                },
+                                "key": {
+                                    "description": "The name of the Amazon S3 object that represents the bundled artifacts for the application revision.",
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "description": "<p>A specific version of the Amazon S3 object that represents the bundled artifacts for the application revision.</p> <p>If the version is not specified, the system uses the most recent version by default.</p>",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "string": {
+                            "description": "Information about the location of an AWS Lambda deployment revision stored as a RawString.",
+                            "properties": {
+                                "content": {
+                                    "description": "The YAML-formatted or JSON-formatted revision string. It includes information about which Lambda function to update and optional Lambda functions that validate deployment lifecycle events.",
+                                    "type": "string"
+                                },
+                                "sha256": {
+                                    "description": "The SHA256 hash value of the revision content.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "required": [
+                "applicationName",
+                "revision"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

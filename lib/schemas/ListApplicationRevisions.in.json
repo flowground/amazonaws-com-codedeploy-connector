@@ -1,0 +1,94 @@
+{
+    "type": "object",
+    "properties": {
+        "nextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": " Represents the input of a ListApplicationRevisions operation. ",
+            "properties": {
+                "applicationName": {
+                    "description": " The name of an AWS CodeDeploy application associated with the IAM user or AWS account. ",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "deployed": {
+                    "description": "<p> Whether to list revisions based on whether the revision is the target revision of an deployment group: </p> <ul> <li> <p>include: List revisions that are target revisions of a deployment group.</p> </li> <li> <p>exclude: Do not list revisions that are target revisions of a deployment group.</p> </li> <li> <p>ignore: List all revisions.</p> </li> </ul>",
+                    "enum": [
+                        "include",
+                        "exclude",
+                        "ignore"
+                    ],
+                    "type": "string"
+                },
+                "nextToken": {
+                    "description": "An identifier returned from the previous <code>ListApplicationRevisions</code> call. It can be used to return the next set of applications in the list.",
+                    "type": "string"
+                },
+                "s3Bucket": {
+                    "description": "<p> An Amazon S3 bucket name to limit the search for revisions. </p> <p> If set to null, all of the user's buckets are searched. </p>",
+                    "type": "string"
+                },
+                "s3KeyPrefix": {
+                    "description": " A key prefix for the set of Amazon S3 objects to limit the search for revisions. ",
+                    "type": "string"
+                },
+                "sortBy": {
+                    "description": "<p>The column name to use to sort the list results:</p> <ul> <li> <p>registerTime: Sort by the time the revisions were registered with AWS CodeDeploy.</p> </li> <li> <p>firstUsedTime: Sort by the time the revisions were first used in a deployment.</p> </li> <li> <p>lastUsedTime: Sort by the time the revisions were last used in a deployment.</p> </li> </ul> <p> If not specified or set to null, the results are returned in an arbitrary order. </p>",
+                    "enum": [
+                        "registerTime",
+                        "firstUsedTime",
+                        "lastUsedTime"
+                    ],
+                    "type": "string"
+                },
+                "sortOrder": {
+                    "description": "<p> The order in which to sort the list results: </p> <ul> <li> <p>ascending: ascending order.</p> </li> <li> <p>descending: descending order.</p> </li> </ul> <p>If not specified, the results are sorted in ascending order.</p> <p>If set to null, the results are sorted in an arbitrary order.</p>",
+                    "enum": [
+                        "ascending",
+                        "descending"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "applicationName"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

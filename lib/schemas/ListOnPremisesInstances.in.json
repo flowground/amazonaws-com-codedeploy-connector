@@ -1,0 +1,86 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the input of a ListOnPremisesInstances operation.",
+            "properties": {
+                "nextToken": {
+                    "description": "An identifier returned from the previous list on-premises instances call. It can be used to return the next set of on-premises instances in the list.",
+                    "type": "string"
+                },
+                "registrationStatus": {
+                    "description": "<p>The registration status of the on-premises instances:</p> <ul> <li> <p>Deregistered: Include deregistered on-premises instances in the resulting list.</p> </li> <li> <p>Registered: Include registered on-premises instances in the resulting list.</p> </li> </ul>",
+                    "enum": [
+                        "Registered",
+                        "Deregistered"
+                    ],
+                    "type": "string"
+                },
+                "tagFilters": {
+                    "description": "The on-premises instance tags that are used to restrict the on-premises instance names returned.",
+                    "items": {
+                        "description": "Information about an on-premises instance tag filter.",
+                        "properties": {
+                            "Key": {
+                                "description": "The on-premises instance tag filter key.",
+                                "type": "string"
+                            },
+                            "Type": {
+                                "description": "<p>The on-premises instance tag filter type:</p> <ul> <li> <p>KEY_ONLY: Key only.</p> </li> <li> <p>VALUE_ONLY: Value only.</p> </li> <li> <p>KEY_AND_VALUE: Key and value.</p> </li> </ul>",
+                                "enum": [
+                                    "KEY_ONLY",
+                                    "VALUE_ONLY",
+                                    "KEY_AND_VALUE"
+                                ],
+                                "type": "string"
+                            },
+                            "Value": {
+                                "description": "The on-premises instance tag filter value.",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

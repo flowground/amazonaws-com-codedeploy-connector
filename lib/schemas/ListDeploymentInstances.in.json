@@ -1,0 +1,86 @@
+{
+    "type": "object",
+    "properties": {
+        "nextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": " Represents the input of a ListDeploymentInstances operation. ",
+            "properties": {
+                "deploymentId": {
+                    "description": " The unique ID of a deployment. ",
+                    "type": "string"
+                },
+                "instanceStatusFilter": {
+                    "description": "<p>A subset of instances to list by status:</p> <ul> <li> <p>Pending: Include those instances with pending deployments.</p> </li> <li> <p>InProgress: Include those instances where deployments are still in progress.</p> </li> <li> <p>Succeeded: Include those instances with successful deployments.</p> </li> <li> <p>Failed: Include those instances with failed deployments.</p> </li> <li> <p>Skipped: Include those instances with skipped deployments.</p> </li> <li> <p>Unknown: Include those instances with deployments in an unknown state.</p> </li> </ul>",
+                    "items": {
+                        "description": "InstanceStatus is deprecated, use TargetStatus instead.",
+                        "enum": [
+                            "Pending",
+                            "InProgress",
+                            "Succeeded",
+                            "Failed",
+                            "Skipped",
+                            "Unknown",
+                            "Ready"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "instanceTypeFilter": {
+                    "description": "The set of instances in a blue/green deployment, either those in the original environment (\"BLUE\") or those in the replacement environment (\"GREEN\"), for which you want to view instance information.",
+                    "items": {
+                        "enum": [
+                            "Blue",
+                            "Green"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "nextToken": {
+                    "description": "An identifier returned from the previous list deployment instances call. It can be used to return the next set of deployment instances in the list.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "deploymentId"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

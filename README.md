@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the AWS CodeDeploy API (version 2014-10-06).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/codedeploy/2014-10-06/swagger.json<br/>
-Generated at: 2019-05-07T17:35:12+03:00
+Generated at: 2019-07-08T14:12:34+03:00
 
 ## API Description
 
@@ -17,7 +17,8 @@ Supported authorization schemes:
 - API Key
 ## Actions
 
-### Adds tags to on-premises instances.
+### AddTagsToOnPremisesInstances
+> Adds tags to on-premises instances.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -30,7 +31,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about one or more application revisions.
+### BatchGetApplicationRevisions
+> Gets information about one or more application revisions.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -43,7 +45,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about one or more applications.
+### BatchGetApplications
+> Gets information about one or more applications.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -56,7 +59,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about one or more deployment groups.
+### BatchGetDeploymentGroups
+> Gets information about one or more deployment groups.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -69,7 +73,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <note> <p> This method works, but is deprecated. Use <code>BatchGetDeploymentTargets</code> instead. </p> </note> <p> Returns an array of instances associated with a deployment. This method works with EC2/On-premises and AWS Lambda compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms. </p>
+### BatchGetDeploymentInstances
+<blockquote><note> <p> This method works, but is deprecated. Use <code>BatchGetDeploymentTargets</code> instead. </p> </note> <p> Returns an array of instances associated with a deployment. This method works with EC2/On-premises and AWS Lambda compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms. </p></blockquote>
 
 #### Input Parameters
 * `Action` - _required_
@@ -82,7 +87,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p> Returns an array of targets associated with a deployment. This method works with all compute types and should be used instead of the deprecated <code>BatchGetDeploymentInstances</code>. </p> <p> The type of targets returned depends on the deployment's compute platform: </p> <ul> <li> <p> <b>EC2/On-premises</b>: Information about EC2 instance targets. </p> </li> <li> <p> <b>AWS Lambda</b>: Information about Lambda functions targets. </p> </li> <li> <p> <b>Amazon ECS</b>: Information about Amazon ECS service targets. </p> </li> </ul>
+### BatchGetDeploymentTargets
+<blockquote><p> Returns an array of targets associated with a deployment. This method works with all compute types and should be used instead of the deprecated <code>BatchGetDeploymentInstances</code>. </p> <p> The type of targets returned depends on the deployment's compute platform: </p> <ul> <li> <p> <b>EC2/On-premises</b>: Information about EC2 instance targets. </p> </li> <li> <p> <b>AWS Lambda</b>: Information about Lambda functions targets. </p> </li> <li> <p> <b>Amazon ECS</b>: Information about Amazon ECS service targets. </p> </li> </ul></blockquote>
 
 #### Input Parameters
 * `Action` - _required_
@@ -95,7 +101,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about one or more deployments.
+### BatchGetDeployments
+> Gets information about one or more deployments.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -108,7 +115,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about one or more on-premises instances.
+### BatchGetOnPremisesInstances
+> Gets information about one or more on-premises instances.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -121,7 +129,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all instances have a status of Ready.)
+### ContinueDeployment
+> For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all instances have a status of Ready.)<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -134,7 +143,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates an application.
+### CreateApplication
+> Creates an application.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -147,7 +157,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deploys an application revision through the specified deployment group.
+### CreateDeployment
+> Deploys an application revision through the specified deployment group.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -160,7 +171,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a deployment configuration.
+### CreateDeploymentConfig
+> Creates a deployment configuration.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -173,7 +185,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a deployment group to which application revisions are deployed.
+### CreateDeploymentGroup
+> Creates a deployment group to which application revisions are deployed.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -186,7 +199,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes an application.
+### DeleteApplication
+> Deletes an application.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -199,7 +213,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Deletes a deployment configuration.</p> <note> <p>A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be deleted.</p> </note>
+### DeleteDeploymentConfig
+<blockquote><p>Deletes a deployment configuration.</p> <note> <p>A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be deleted.</p> </note></blockquote>
 
 #### Input Parameters
 * `Action` - _required_
@@ -212,7 +227,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a deployment group.
+### DeleteDeploymentGroup
+> Deletes a deployment group.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -225,7 +241,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deletes a GitHub account connection.
+### DeleteGitHubAccountToken
+> Deletes a GitHub account connection.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -238,7 +255,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Deregisters an on-premises instance.
+### DeregisterOnPremisesInstance
+> Deregisters an on-premises instance.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -251,7 +269,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about an application.
+### GetApplication
+> Gets information about an application.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -264,7 +283,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about an application revision.
+### GetApplicationRevision
+> Gets information about an application revision.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -277,7 +297,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Gets information about a deployment.</p> <note> <p> The <code>content</code> property of the <code>appSpecContent</code> object in the returned revision is always null. Use <code>GetApplicationRevision</code> and the <code>sha256</code> property of the returned <code>appSpecContent</code> object to get the content of the deployment's AppSpec file. </p> </note>
+### GetDeployment
+<blockquote><p>Gets information about a deployment.</p> <note> <p> The <code>content</code> property of the <code>appSpecContent</code> object in the returned revision is always null. Use <code>GetApplicationRevision</code> and the <code>sha256</code> property of the returned <code>appSpecContent</code> object to get the content of the deployment's AppSpec file. </p> </note></blockquote>
 
 #### Input Parameters
 * `Action` - _required_
@@ -290,7 +311,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about a deployment configuration.
+### GetDeploymentConfig
+> Gets information about a deployment configuration.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -303,7 +325,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about a deployment group.
+### GetDeploymentGroup
+> Gets information about a deployment group.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -316,7 +339,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about an instance as part of a deployment.
+### GetDeploymentInstance
+> Gets information about an instance as part of a deployment.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -329,7 +353,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Returns information about a deployment target.
+### GetDeploymentTarget
+> Returns information about a deployment target.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -342,7 +367,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Gets information about an on-premises instance.
+### GetOnPremisesInstance
+> Gets information about an on-premises instance.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -355,10 +381,11 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists information about revisions for an application.
+### ListApplicationRevisions
+> Lists information about revisions for an application.<br/>
 
 #### Input Parameters
-* `nextToken` - _optional_ - Pagination token
+* `nextToken` - _optional_ - Pagination token<br/>
 * `Version` - _required_
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
@@ -368,10 +395,11 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists the applications registered with the IAM user or AWS account.
+### ListApplications
+> Lists the applications registered with the IAM user or AWS account.<br/>
 
 #### Input Parameters
-* `nextToken` - _optional_ - Pagination token
+* `nextToken` - _optional_ - Pagination token<br/>
 * `Version` - _required_
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
@@ -381,10 +409,11 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists the deployment configurations with the IAM user or AWS account.
+### ListDeploymentConfigs
+> Lists the deployment configurations with the IAM user or AWS account.<br/>
 
 #### Input Parameters
-* `nextToken` - _optional_ - Pagination token
+* `nextToken` - _optional_ - Pagination token<br/>
 * `Version` - _required_
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
@@ -394,10 +423,11 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists the deployment groups for an application registered with the IAM user or AWS account.
+### ListDeploymentGroups
+> Lists the deployment groups for an application registered with the IAM user or AWS account.<br/>
 
 #### Input Parameters
-* `nextToken` - _optional_ - Pagination token
+* `nextToken` - _optional_ - Pagination token<br/>
 * `Version` - _required_
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
@@ -407,10 +437,11 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <note> <p> The newer BatchGetDeploymentTargets should be used instead because it works with all compute types. <code>ListDeploymentInstances</code> throws an exception if it is used with a compute platform other than EC2/On-premises or AWS Lambda. </p> </note> <p> Lists the instance for a deployment associated with the IAM user or AWS account. </p>
+### ListDeploymentInstances
+<blockquote><note> <p> The newer BatchGetDeploymentTargets should be used instead because it works with all compute types. <code>ListDeploymentInstances</code> throws an exception if it is used with a compute platform other than EC2/On-premises or AWS Lambda. </p> </note> <p> Lists the instance for a deployment associated with the IAM user or AWS account. </p></blockquote>
 
 #### Input Parameters
-* `nextToken` - _optional_ - Pagination token
+* `nextToken` - _optional_ - Pagination token<br/>
 * `Version` - _required_
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
@@ -420,33 +451,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Returns an array of target IDs that are associated a deployment.
-
-#### Input Parameters
-* `Action` - _required_
-* `Version` - _required_
-* `X-Amz-Content-Sha256` - _optional_
-* `X-Amz-Date` - _optional_
-* `X-Amz-Algorithm` - _optional_
-* `X-Amz-Credential` - _optional_
-* `X-Amz-Security-Token` - _optional_
-* `X-Amz-Signature` - _optional_
-* `X-Amz-SignedHeaders` - _optional_
-
-### Lists the deployments in a deployment group for an application registered with the IAM user or AWS account.
-
-#### Input Parameters
-* `nextToken` - _optional_ - Pagination token
-* `Version` - _required_
-* `X-Amz-Content-Sha256` - _optional_
-* `X-Amz-Date` - _optional_
-* `X-Amz-Algorithm` - _optional_
-* `X-Amz-Credential` - _optional_
-* `X-Amz-Security-Token` - _optional_
-* `X-Amz-Signature` - _optional_
-* `X-Amz-SignedHeaders` - _optional_
-
-### Lists the names of stored connections to GitHub accounts.
+### ListDeploymentTargets
+> Returns an array of target IDs that are associated a deployment.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -459,7 +465,22 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Gets a list of names for one or more on-premises instances.</p> <p>Unless otherwise specified, both registered and deregistered on-premises instance names are listed. To list only registered or deregistered on-premises instance names, use the registration status parameter.</p>
+### ListDeployments
+> Lists the deployments in a deployment group for an application registered with the IAM user or AWS account.<br/>
+
+#### Input Parameters
+* `nextToken` - _optional_ - Pagination token<br/>
+* `Version` - _required_
+* `X-Amz-Content-Sha256` - _optional_
+* `X-Amz-Date` - _optional_
+* `X-Amz-Algorithm` - _optional_
+* `X-Amz-Credential` - _optional_
+* `X-Amz-Security-Token` - _optional_
+* `X-Amz-Signature` - _optional_
+* `X-Amz-SignedHeaders` - _optional_
+
+### ListGitHubAccountTokenNames
+> Lists the names of stored connections to GitHub accounts.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -472,7 +493,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Sets the result of a Lambda validation function. The function validates one or both lifecycle events (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or <code>Failed</code>.
+### ListOnPremisesInstances
+<blockquote><p>Gets a list of names for one or more on-premises instances.</p> <p>Unless otherwise specified, both registered and deregistered on-premises instance names are listed. To list only registered or deregistered on-premises instance names, use the registration status parameter.</p></blockquote>
 
 #### Input Parameters
 * `Action` - _required_
@@ -485,7 +507,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Registers with AWS CodeDeploy a revision for the specified application.
+### PutLifecycleEventHookExecutionStatus
+> Sets the result of a Lambda validation function. The function validates one or both lifecycle events (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or <code>Failed</code>.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -498,7 +521,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### <p>Registers an on-premises instance.</p> <note> <p>Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use both.</p> </note>
+### RegisterApplicationRevision
+> Registers with AWS CodeDeploy a revision for the specified application.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -511,7 +535,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Removes one or more tags from one or more on-premises instances.
+### RegisterOnPremisesInstance
+<blockquote><p>Registers an on-premises instance.</p> <note> <p>Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use both.</p> </note></blockquote>
 
 #### Input Parameters
 * `Action` - _required_
@@ -524,7 +549,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the traffic routing is complete.
+### RemoveTagsFromOnPremisesInstances
+> Removes one or more tags from one or more on-premises instances.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -537,7 +563,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Attempts to stop an ongoing deployment.
+### SkipWaitTimeForInstanceTermination
+> In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the traffic routing is complete.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -550,7 +577,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes the name of an application.
+### StopDeployment
+> Attempts to stop an ongoing deployment.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -563,7 +591,22 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Changes information about a deployment group.
+### UpdateApplication
+> Changes the name of an application.<br/>
+
+#### Input Parameters
+* `Action` - _required_
+* `Version` - _required_
+* `X-Amz-Content-Sha256` - _optional_
+* `X-Amz-Date` - _optional_
+* `X-Amz-Algorithm` - _optional_
+* `X-Amz-Credential` - _optional_
+* `X-Amz-Security-Token` - _optional_
+* `X-Amz-Signature` - _optional_
+* `X-Amz-SignedHeaders` - _optional_
+
+### UpdateDeploymentGroup
+> Changes information about a deployment group.<br/>
 
 #### Input Parameters
 * `Action` - _required_

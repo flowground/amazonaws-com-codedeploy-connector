@@ -1,6 +1,6 @@
 {
     "title": "AWS CodeDeploy",
-    "description": "<fullname>AWS CodeDeploy</fullname> <p>AWS CodeDeploy is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances running in your own facility, serverless AWS Lambda functions, or applications in an Amazon ECS service.</p> <p>You can deploy a nearly unlimited variety of application content, such as an updated Lambda function, updated applications in an Amazon ECS service, code, web and configuration files, executables, packages, scripts, multimedia files, and so on. AWS CodeDeploy can deploy application content stored in Amazon S3 buckets, GitHub repositories, or Bitbucket repositories. You do not need to make changes to your existing code before you can use AWS CodeDeploy.</p> <p>AWS CodeDeploy makes it easier for you to rapidly release new features, helps you avoid downtime during application deployment, and handles the complexity of updating your applications, without many of the risks associated with error-prone manual deployments.</p> <p> <b>AWS CodeDeploy Components</b> </p> <p>Use the information in this guide to help you work with the following AWS CodeDeploy components:</p> <ul> <li> <p> <b>Application</b>: A name that uniquely identifies the application you want to deploy. AWS CodeDeploy uses this name, which functions as a container, to ensure the correct combination of revision, deployment configuration, and deployment group are referenced during a deployment.</p> </li> <li> <p> <b>Deployment group</b>: A set of individual instances, CodeDeploy Lambda deployment configuration settings, or an Amazon ECS service and network details. A Lambda deployment group specifies how to route traffic to a new version of a Lambda function. An Amazon ECS deployment group specifies the service created in Amazon ECS to deploy, a load balancer, and a listener to reroute production traffic to an updated containerized application. An EC2/On-premises deployment group contains individually tagged instances, Amazon EC2 instances in Amazon EC2 Auto Scaling groups, or both. All deployment groups can specify optional trigger, alarm, and rollback settings.</p> </li> <li> <p> <b>Deployment configuration</b>: A set of deployment rules and deployment success and failure conditions used by AWS CodeDeploy during a deployment.</p> </li> <li> <p> <b>Deployment</b>: The process and the components used when updating a Lambda function, a containerized application in an Amazon ECS service, or of installing content on one or more instances. </p> </li> <li> <p> <b>Application revisions</b>: For an AWS Lambda deployment, this is an AppSpec file that specifies the Lambda function to be updated and one or more functions to validate deployment lifecycle events. For an Amazon ECS deployment, this is an AppSpec file that specifies the Amazon ECS task definition, container, and port where production traffic is rerouted. For an EC2/On-premises deployment, this is an archive file that contains source content--source code, webpages, executable files, and deployment scripts--along with an AppSpec file. Revisions are stored in Amazon S3 buckets or GitHub repositories. For Amazon S3, a revision is uniquely identified by its Amazon S3 object key and its ETag, version, or both. For GitHub, a revision is uniquely identified by its commit ID.</p> </li> </ul> <p>This guide also contains information to help you get details about the instances in your deployments, to make on-premises instances available for AWS CodeDeploy deployments, to get details about a Lambda function deployment, and to get details about Amazon ECS service deployments.</p> <p> <b>AWS CodeDeploy Information Resources</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide\">AWS CodeDeploy User Guide</a> </p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/codedeploy/latest/APIReference/\">AWS CodeDeploy API Reference Guide</a> </p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/cli/latest/reference/deploy/index.html\">AWS CLI Reference for AWS CodeDeploy</a> </p> </li> <li> <p> <a href=\"https://forums.aws.amazon.com/forum.jspa?forumID=179\">AWS CodeDeploy Developer Forum</a> </p> </li> </ul>",
+    "description": "AWS CodeDeploy AWS CodeDeploy is a deployment service that automates application\ndeployments to Amazon EC2 instances, on-premises instances running in your own\nfacility, serverless AWS Lambda functions, or applications in an Amazon ECS\nservice.\n\nYou can deploy a nearly unlimited variety of application content, such as an\nupdated Lambda function, updated applications in an Amazon ECS service, code,\nweb and configuration files, executables, packages, scripts, multimedia files,\nand so on. AWS CodeDeploy can deploy application content stored in Amazon S3\nbuckets, GitHub repositories, or Bitbucket repositories. You do not need to make\nchanges to your existing code before you can use AWS CodeDeploy.\n\nAWS CodeDeploy makes it easier for you to rapidly release new features, helps\nyou avoid downtime during application deployment, and handles the complexity of\nupdating your applications, without many of the risks associated with\nerror-prone manual deployments.\n\n AWS CodeDeploy Components \n\nUse the information in this guide to help you work with the following AWS\nCodeDeploy components:\n\n *   Application: A name that uniquely identifies the application you want to\n   deploy. AWS CodeDeploy uses this name, which functions as a container, to\n   ensure the correct combination of revision, deployment configuration, and\n   deployment group are referenced during a deployment.\n   \n   \n *   Deployment group: A set of individual instances, CodeDeploy Lambda\n   deployment configuration settings, or an Amazon ECS service and network\n   details. A Lambda deployment group specifies how to route traffic to a new\n   version of a Lambda function. An Amazon ECS deployment group specifies the\n   service created in Amazon ECS to deploy, a load balancer, and a listener to\n   reroute production traffic to an updated containerized application. An\n   EC2/On-premises deployment group contains individually tagged instances,\n   Amazon EC2 instances in Amazon EC2 Auto Scaling groups, or both. All\n   deployment groups can specify optional trigger, alarm, and rollback settings.\n   \n   \n *   Deployment configuration: A set of deployment rules and deployment success\n   and failure conditions used by AWS CodeDeploy during a deployment.\n   \n   \n *   Deployment: The process and the components used when updating a Lambda\n   function, a containerized application in an Amazon ECS service, or of\n   installing content on one or more instances. \n   \n   \n *   Application revisions: For an AWS Lambda deployment, this is an AppSpec file\n   that specifies the Lambda function to be updated and one or more functions to\n   validate deployment lifecycle events. For an Amazon ECS deployment, this is\n   an AppSpec file that specifies the Amazon ECS task definition, container, and\n   port where production traffic is rerouted. For an EC2/On-premises deployment,\n   this is an archive file that contains source content--source code, webpages,\n   executable files, and deployment scripts--along with an AppSpec file.\n   Revisions are stored in Amazon S3 buckets or GitHub repositories. For Amazon\n   S3, a revision is uniquely identified by its Amazon S3 object key and its\n   ETag, version, or both. For GitHub, a revision is uniquely identified by its\n   commit ID.\n   \n   \n\nThis guide also contains information to help you get details about the instances\nin your deployments, to make on-premises instances available for AWS CodeDeploy\ndeployments, to get details about a Lambda function deployment, and to get\ndetails about Amazon ECS service deployments.\n\n AWS CodeDeploy Information Resources \n\n *   AWS CodeDeploy User Guide\n   [https://docs.aws.amazon.com/codedeploy/latest/userguide] \n   \n   \n *   AWS CodeDeploy API Reference Guide\n   [https://docs.aws.amazon.com/codedeploy/latest/APIReference/] \n   \n   \n *   AWS CLI Reference for AWS CodeDeploy\n   [https://docs.aws.amazon.com/cli/latest/reference/deploy/index.html] \n   \n   \n *   AWS CodeDeploy Developer Forum\n   [https://forums.aws.amazon.com/forum.jspa?forumID=179]",
     "docsUrl": "https://aws.amazon.com/codedeploy/",
     "url": "https://api.apis.guru/v2/specs/amazonaws.com/codedeploy/2014-10-06/swagger.json",
     "envVars": {},
@@ -20,7 +20,7 @@
                 "label": "Custom Server URL",
                 "viewClass": "TextFieldView"
             },
-            "hmac": {
+            "auth_hmac": {
                 "label": "Authorization (hmac)",
                 "viewClass": "TextFieldView",
                 "note": "Amazon Signature authorization v4"
@@ -38,7 +38,7 @@
     "actions": {
         "AddTagsToOnPremisesInstances": {
             "main": "./lib/actions/AddTagsToOnPremisesInstances.js",
-            "title": "Adds tags to on-premises instances.",
+            "title": "AddTagsToOnPremisesInstances",
             "description": "Adds tags to on-premises instances.",
             "fields": {
                 "verbose": {
@@ -55,7 +55,7 @@
         },
         "BatchGetApplicationRevisions": {
             "main": "./lib/actions/BatchGetApplicationRevisions.js",
-            "title": "Gets information about one or more application revisions.",
+            "title": "BatchGetApplicationRevisions",
             "description": "Gets information about one or more application revisions.",
             "fields": {
                 "verbose": {
@@ -72,7 +72,7 @@
         },
         "BatchGetApplications": {
             "main": "./lib/actions/BatchGetApplications.js",
-            "title": "Gets information about one or more applications.",
+            "title": "BatchGetApplications",
             "description": "Gets information about one or more applications.",
             "fields": {
                 "verbose": {
@@ -89,7 +89,7 @@
         },
         "BatchGetDeploymentGroups": {
             "main": "./lib/actions/BatchGetDeploymentGroups.js",
-            "title": "Gets information about one or more deployment groups.",
+            "title": "BatchGetDeploymentGroups",
             "description": "Gets information about one or more deployment groups.",
             "fields": {
                 "verbose": {
@@ -106,8 +106,8 @@
         },
         "BatchGetDeploymentInstances": {
             "main": "./lib/actions/BatchGetDeploymentInstances.js",
-            "title": "<note> <p> This method works, but is deprecated. Use <code>BatchGetDeploymentTargets</code> instead. </p> </note> <p> Returns an array of instances associated with a deployment. This method works with EC2/On-premises and AWS Lambda compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms. </p>",
-            "description": "<note> <p> This method works, but is deprecated. Use <code>BatchGetDeploymentTargets</code> instead. </p> </note> <p> Returns an array of instances associated with a deployment. This method works with EC2/On-premises and AWS Lambda compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms. </p>",
+            "title": "BatchGetDeploymentInstances",
+            "description": "  This method works, but is deprecated. Use BatchGetDeploymentTargets instead. \n\n Returns an array of instances associated with a deployment. This method works\nwith EC2/On-premises and AWS Lambda compute platforms. The newer \nBatchGetDeploymentTargets works with all compute platforms.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -123,8 +123,8 @@
         },
         "BatchGetDeploymentTargets": {
             "main": "./lib/actions/BatchGetDeploymentTargets.js",
-            "title": "<p> Returns an array of targets associated with a deployment. This method works with all compute types and should be used instead of the deprecated <code>BatchGetDeploymentInstances</code>. </p> <p> The type of targets returned depends on the deployment's compute platform: </p> <ul> <li> <p> <b>EC2/On-premises</b>: Information about EC2 instance targets. </p> </li> <li> <p> <b>AWS Lambda</b>: Information about Lambda functions targets. </p> </li> <li> <p> <b>Amazon ECS</b>: Information about Amazon ECS service targets. </p> </li> </ul>",
-            "description": "<p> Returns an array of targets associated with a deployment. This method works with all compute types and should be used instead of the deprecated <code>BatchGetDeploymentInstances</code>. </p> <p> The type of targets returned depends on the deployment's compute platform: </p> <ul> <li> <p> <b>EC2/On-premises</b>: Information about EC2 instance targets. </p> </li> <li> <p> <b>AWS Lambda</b>: Information about Lambda functions targets. </p> </li> <li> <p> <b>Amazon ECS</b>: Information about Amazon ECS service targets. </p> </li> </ul>",
+            "title": "BatchGetDeploymentTargets",
+            "description": " Returns an array of targets associated with a deployment. This method works\nwith all compute types and should be used instead of the deprecated \nBatchGetDeploymentInstances. \n\n The type of targets returned depends on the deployment's compute platform: \n\n *   EC2/On-premises: Information about EC2 instance targets. \n   \n   \n *   AWS Lambda: Information about Lambda functions targets. \n   \n   \n *   Amazon ECS: Information about Amazon ECS service targets.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -140,7 +140,7 @@
         },
         "BatchGetDeployments": {
             "main": "./lib/actions/BatchGetDeployments.js",
-            "title": "Gets information about one or more deployments.",
+            "title": "BatchGetDeployments",
             "description": "Gets information about one or more deployments.",
             "fields": {
                 "verbose": {
@@ -157,7 +157,7 @@
         },
         "BatchGetOnPremisesInstances": {
             "main": "./lib/actions/BatchGetOnPremisesInstances.js",
-            "title": "Gets information about one or more on-premises instances.",
+            "title": "BatchGetOnPremisesInstances",
             "description": "Gets information about one or more on-premises instances.",
             "fields": {
                 "verbose": {
@@ -174,7 +174,7 @@
         },
         "ContinueDeployment": {
             "main": "./lib/actions/ContinueDeployment.js",
-            "title": "For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all instances have a status of Ready.) ",
+            "title": "ContinueDeployment",
             "description": "For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all instances have a status of Ready.) ",
             "fields": {
                 "verbose": {
@@ -191,7 +191,7 @@
         },
         "CreateApplication": {
             "main": "./lib/actions/CreateApplication.js",
-            "title": "Creates an application.",
+            "title": "CreateApplication",
             "description": "Creates an application.",
             "fields": {
                 "verbose": {
@@ -208,7 +208,7 @@
         },
         "CreateDeployment": {
             "main": "./lib/actions/CreateDeployment.js",
-            "title": "Deploys an application revision through the specified deployment group.",
+            "title": "CreateDeployment",
             "description": "Deploys an application revision through the specified deployment group.",
             "fields": {
                 "verbose": {
@@ -225,7 +225,7 @@
         },
         "CreateDeploymentConfig": {
             "main": "./lib/actions/CreateDeploymentConfig.js",
-            "title": " Creates a deployment configuration. ",
+            "title": "CreateDeploymentConfig",
             "description": " Creates a deployment configuration. ",
             "fields": {
                 "verbose": {
@@ -242,7 +242,7 @@
         },
         "CreateDeploymentGroup": {
             "main": "./lib/actions/CreateDeploymentGroup.js",
-            "title": "Creates a deployment group to which application revisions are deployed.",
+            "title": "CreateDeploymentGroup",
             "description": "Creates a deployment group to which application revisions are deployed.",
             "fields": {
                 "verbose": {
@@ -259,7 +259,7 @@
         },
         "DeleteApplication": {
             "main": "./lib/actions/DeleteApplication.js",
-            "title": "Deletes an application.",
+            "title": "DeleteApplication",
             "description": "Deletes an application.",
             "fields": {
                 "verbose": {
@@ -276,8 +276,8 @@
         },
         "DeleteDeploymentConfig": {
             "main": "./lib/actions/DeleteDeploymentConfig.js",
-            "title": "<p>Deletes a deployment configuration.</p> <note> <p>A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be deleted.</p> </note>",
-            "description": "<p>Deletes a deployment configuration.</p> <note> <p>A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be deleted.</p> </note>",
+            "title": "DeleteDeploymentConfig",
+            "description": "Deletes a deployment configuration.\n\nA deployment configuration cannot be deleted if it is currently in use.\nPredefined configurations cannot be deleted.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -293,7 +293,7 @@
         },
         "DeleteDeploymentGroup": {
             "main": "./lib/actions/DeleteDeploymentGroup.js",
-            "title": "Deletes a deployment group.",
+            "title": "DeleteDeploymentGroup",
             "description": "Deletes a deployment group.",
             "fields": {
                 "verbose": {
@@ -310,7 +310,7 @@
         },
         "DeleteGitHubAccountToken": {
             "main": "./lib/actions/DeleteGitHubAccountToken.js",
-            "title": "Deletes a GitHub account connection.",
+            "title": "DeleteGitHubAccountToken",
             "description": "Deletes a GitHub account connection.",
             "fields": {
                 "verbose": {
@@ -327,7 +327,7 @@
         },
         "DeregisterOnPremisesInstance": {
             "main": "./lib/actions/DeregisterOnPremisesInstance.js",
-            "title": "Deregisters an on-premises instance.",
+            "title": "DeregisterOnPremisesInstance",
             "description": "Deregisters an on-premises instance.",
             "fields": {
                 "verbose": {
@@ -344,7 +344,7 @@
         },
         "GetApplication": {
             "main": "./lib/actions/GetApplication.js",
-            "title": "Gets information about an application.",
+            "title": "GetApplication",
             "description": "Gets information about an application.",
             "fields": {
                 "verbose": {
@@ -361,7 +361,7 @@
         },
         "GetApplicationRevision": {
             "main": "./lib/actions/GetApplicationRevision.js",
-            "title": "Gets information about an application revision.",
+            "title": "GetApplicationRevision",
             "description": "Gets information about an application revision.",
             "fields": {
                 "verbose": {
@@ -378,8 +378,8 @@
         },
         "GetDeployment": {
             "main": "./lib/actions/GetDeployment.js",
-            "title": "<p>Gets information about a deployment.</p> <note> <p> The <code>content</code> property of the <code>appSpecContent</code> object in the returned revision is always null. Use <code>GetApplicationRevision</code> and the <code>sha256</code> property of the returned <code>appSpecContent</code> object to get the content of the deployment's AppSpec file. </p> </note>",
-            "description": "<p>Gets information about a deployment.</p> <note> <p> The <code>content</code> property of the <code>appSpecContent</code> object in the returned revision is always null. Use <code>GetApplicationRevision</code> and the <code>sha256</code> property of the returned <code>appSpecContent</code> object to get the content of the deployment's AppSpec file. </p> </note>",
+            "title": "GetDeployment",
+            "description": "Gets information about a deployment.\n\n The content property of the appSpecContent object in the returned revision is\nalways null. Use GetApplicationRevision and the sha256 property of the returned \nappSpecContent object to get the content of the deployment's AppSpec file.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -395,7 +395,7 @@
         },
         "GetDeploymentConfig": {
             "main": "./lib/actions/GetDeploymentConfig.js",
-            "title": "Gets information about a deployment configuration.",
+            "title": "GetDeploymentConfig",
             "description": "Gets information about a deployment configuration.",
             "fields": {
                 "verbose": {
@@ -412,7 +412,7 @@
         },
         "GetDeploymentGroup": {
             "main": "./lib/actions/GetDeploymentGroup.js",
-            "title": "Gets information about a deployment group.",
+            "title": "GetDeploymentGroup",
             "description": "Gets information about a deployment group.",
             "fields": {
                 "verbose": {
@@ -429,7 +429,7 @@
         },
         "GetDeploymentInstance": {
             "main": "./lib/actions/GetDeploymentInstance.js",
-            "title": "Gets information about an instance as part of a deployment.",
+            "title": "GetDeploymentInstance",
             "description": "Gets information about an instance as part of a deployment.",
             "fields": {
                 "verbose": {
@@ -446,7 +446,7 @@
         },
         "GetDeploymentTarget": {
             "main": "./lib/actions/GetDeploymentTarget.js",
-            "title": " Returns information about a deployment target. ",
+            "title": "GetDeploymentTarget",
             "description": " Returns information about a deployment target. ",
             "fields": {
                 "verbose": {
@@ -463,7 +463,7 @@
         },
         "GetOnPremisesInstance": {
             "main": "./lib/actions/GetOnPremisesInstance.js",
-            "title": " Gets information about an on-premises instance. ",
+            "title": "GetOnPremisesInstance",
             "description": " Gets information about an on-premises instance. ",
             "fields": {
                 "verbose": {
@@ -480,7 +480,7 @@
         },
         "ListApplicationRevisions": {
             "main": "./lib/actions/ListApplicationRevisions.js",
-            "title": "Lists information about revisions for an application.",
+            "title": "ListApplicationRevisions",
             "description": "Lists information about revisions for an application.",
             "fields": {
                 "verbose": {
@@ -497,7 +497,7 @@
         },
         "ListApplications": {
             "main": "./lib/actions/ListApplications.js",
-            "title": "Lists the applications registered with the IAM user or AWS account.",
+            "title": "ListApplications",
             "description": "Lists the applications registered with the IAM user or AWS account.",
             "fields": {
                 "verbose": {
@@ -514,7 +514,7 @@
         },
         "ListDeploymentConfigs": {
             "main": "./lib/actions/ListDeploymentConfigs.js",
-            "title": "Lists the deployment configurations with the IAM user or AWS account.",
+            "title": "ListDeploymentConfigs",
             "description": "Lists the deployment configurations with the IAM user or AWS account.",
             "fields": {
                 "verbose": {
@@ -531,7 +531,7 @@
         },
         "ListDeploymentGroups": {
             "main": "./lib/actions/ListDeploymentGroups.js",
-            "title": "Lists the deployment groups for an application registered with the IAM user or AWS account.",
+            "title": "ListDeploymentGroups",
             "description": "Lists the deployment groups for an application registered with the IAM user or AWS account.",
             "fields": {
                 "verbose": {
@@ -548,8 +548,8 @@
         },
         "ListDeploymentInstances": {
             "main": "./lib/actions/ListDeploymentInstances.js",
-            "title": "<note> <p> The newer BatchGetDeploymentTargets should be used instead because it works with all compute types. <code>ListDeploymentInstances</code> throws an exception if it is used with a compute platform other than EC2/On-premises or AWS Lambda. </p> </note> <p> Lists the instance for a deployment associated with the IAM user or AWS account. </p>",
-            "description": "<note> <p> The newer BatchGetDeploymentTargets should be used instead because it works with all compute types. <code>ListDeploymentInstances</code> throws an exception if it is used with a compute platform other than EC2/On-premises or AWS Lambda. </p> </note> <p> Lists the instance for a deployment associated with the IAM user or AWS account. </p>",
+            "title": "ListDeploymentInstances",
+            "description": "  The newer BatchGetDeploymentTargets should be used instead because it works\nwith all compute types. ListDeploymentInstances throws an exception if it is\nused with a compute platform other than EC2/On-premises or AWS Lambda. \n\n Lists the instance for a deployment associated with the IAM user or AWS\naccount.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -565,7 +565,7 @@
         },
         "ListDeploymentTargets": {
             "main": "./lib/actions/ListDeploymentTargets.js",
-            "title": " Returns an array of target IDs that are associated a deployment. ",
+            "title": "ListDeploymentTargets",
             "description": " Returns an array of target IDs that are associated a deployment. ",
             "fields": {
                 "verbose": {
@@ -582,7 +582,7 @@
         },
         "ListDeployments": {
             "main": "./lib/actions/ListDeployments.js",
-            "title": "Lists the deployments in a deployment group for an application registered with the IAM user or AWS account.",
+            "title": "ListDeployments",
             "description": "Lists the deployments in a deployment group for an application registered with the IAM user or AWS account.",
             "fields": {
                 "verbose": {
@@ -599,7 +599,7 @@
         },
         "ListGitHubAccountTokenNames": {
             "main": "./lib/actions/ListGitHubAccountTokenNames.js",
-            "title": "Lists the names of stored connections to GitHub accounts.",
+            "title": "ListGitHubAccountTokenNames",
             "description": "Lists the names of stored connections to GitHub accounts.",
             "fields": {
                 "verbose": {
@@ -616,8 +616,8 @@
         },
         "ListOnPremisesInstances": {
             "main": "./lib/actions/ListOnPremisesInstances.js",
-            "title": "<p>Gets a list of names for one or more on-premises instances.</p> <p>Unless otherwise specified, both registered and deregistered on-premises instance names are listed. To list only registered or deregistered on-premises instance names, use the registration status parameter.</p>",
-            "description": "<p>Gets a list of names for one or more on-premises instances.</p> <p>Unless otherwise specified, both registered and deregistered on-premises instance names are listed. To list only registered or deregistered on-premises instance names, use the registration status parameter.</p>",
+            "title": "ListOnPremisesInstances",
+            "description": "Gets a list of names for one or more on-premises instances.\n\nUnless otherwise specified, both registered and deregistered on-premises\ninstance names are listed. To list only registered or deregistered on-premises\ninstance names, use the registration status parameter.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -633,7 +633,7 @@
         },
         "PutLifecycleEventHookExecutionStatus": {
             "main": "./lib/actions/PutLifecycleEventHookExecutionStatus.js",
-            "title": " Sets the result of a Lambda validation function. The function validates one or both lifecycle events (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or <code>Failed</code>. ",
+            "title": "PutLifecycleEventHookExecutionStatus",
             "description": " Sets the result of a Lambda validation function. The function validates one or both lifecycle events (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or <code>Failed</code>. ",
             "fields": {
                 "verbose": {
@@ -650,7 +650,7 @@
         },
         "RegisterApplicationRevision": {
             "main": "./lib/actions/RegisterApplicationRevision.js",
-            "title": "Registers with AWS CodeDeploy a revision for the specified application.",
+            "title": "RegisterApplicationRevision",
             "description": "Registers with AWS CodeDeploy a revision for the specified application.",
             "fields": {
                 "verbose": {
@@ -667,8 +667,8 @@
         },
         "RegisterOnPremisesInstance": {
             "main": "./lib/actions/RegisterOnPremisesInstance.js",
-            "title": "<p>Registers an on-premises instance.</p> <note> <p>Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use both.</p> </note>",
-            "description": "<p>Registers an on-premises instance.</p> <note> <p>Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use both.</p> </note>",
+            "title": "RegisterOnPremisesInstance",
+            "description": "Registers an on-premises instance.\n\nOnly one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the\nrequest. You cannot use both.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -684,7 +684,7 @@
         },
         "RemoveTagsFromOnPremisesInstances": {
             "main": "./lib/actions/RemoveTagsFromOnPremisesInstances.js",
-            "title": "Removes one or more tags from one or more on-premises instances.",
+            "title": "RemoveTagsFromOnPremisesInstances",
             "description": "Removes one or more tags from one or more on-premises instances.",
             "fields": {
                 "verbose": {
@@ -701,7 +701,7 @@
         },
         "SkipWaitTimeForInstanceTermination": {
             "main": "./lib/actions/SkipWaitTimeForInstanceTermination.js",
-            "title": "In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the traffic routing is complete.",
+            "title": "SkipWaitTimeForInstanceTermination",
             "description": "In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the traffic routing is complete.",
             "fields": {
                 "verbose": {
@@ -718,7 +718,7 @@
         },
         "StopDeployment": {
             "main": "./lib/actions/StopDeployment.js",
-            "title": "Attempts to stop an ongoing deployment.",
+            "title": "StopDeployment",
             "description": "Attempts to stop an ongoing deployment.",
             "fields": {
                 "verbose": {
@@ -735,7 +735,7 @@
         },
         "UpdateApplication": {
             "main": "./lib/actions/UpdateApplication.js",
-            "title": "Changes the name of an application.",
+            "title": "UpdateApplication",
             "description": "Changes the name of an application.",
             "fields": {
                 "verbose": {
@@ -752,7 +752,7 @@
         },
         "UpdateDeploymentGroup": {
             "main": "./lib/actions/UpdateDeploymentGroup.js",
-            "title": "Changes information about a deployment group.",
+            "title": "UpdateDeploymentGroup",
             "description": "Changes information about a deployment group.",
             "fields": {
                 "verbose": {
